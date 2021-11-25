@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owasp-orminjection.WebApi", "owasp-orminjection.WebApi\owasp-orminjection.WebApi.csproj", "{CC4BB079-8B72-4D0F-B74A-02347EB305D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owasp-orminjection.Domain", "owasp-orminjection.Domain\owasp-orminjection.Domain.csproj", "{69C14C74-A4A5-4ADC-8D6D-EE030DC88C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owasp-orminjection.Infrastructure", "owasp-orminjection.Infrastructure\owasp-orminjection.Infrastructure.csproj", "{258F37B0-F0F5-4A4C-BE5E-09244CFC8CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owasp-orminjection.Application", "owasp-orminjection.Application\owasp-orminjection.Application.csproj", "{49E791EA-5473-410F-BFD7-E0B7F45F4E1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC4BB079-8B72-4D0F-B74A-02347EB305D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4BB079-8B72-4D0F-B74A-02347EB305D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4BB079-8B72-4D0F-B74A-02347EB305D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4BB079-8B72-4D0F-B74A-02347EB305D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C14C74-A4A5-4ADC-8D6D-EE030DC88C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C14C74-A4A5-4ADC-8D6D-EE030DC88C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C14C74-A4A5-4ADC-8D6D-EE030DC88C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C14C74-A4A5-4ADC-8D6D-EE030DC88C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258F37B0-F0F5-4A4C-BE5E-09244CFC8CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258F37B0-F0F5-4A4C-BE5E-09244CFC8CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258F37B0-F0F5-4A4C-BE5E-09244CFC8CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258F37B0-F0F5-4A4C-BE5E-09244CFC8CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E791EA-5473-410F-BFD7-E0B7F45F4E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E791EA-5473-410F-BFD7-E0B7F45F4E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E791EA-5473-410F-BFD7-E0B7F45F4E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E791EA-5473-410F-BFD7-E0B7F45F4E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3CD74B3-1149-4806-AEF6-F0A0A79BF8AE}
+	EndGlobalSection
+EndGlobal
