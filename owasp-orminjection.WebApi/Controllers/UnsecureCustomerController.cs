@@ -27,8 +27,15 @@ namespace owasp_orminjection.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("/lastname/{lastname}")]
-        public IEnumerable<Customer> GetCustomers(string lastname)
+        [Route("name/{name}")]
+        public IEnumerable<Customer> GetCustomersByName(string name)
+        {
+            return customerService.FindByName(name);
+        }
+
+        [HttpGet]
+        [Route("lastname/{lastname}")]
+        public IEnumerable<Customer> GetCustomersByLastname(string lastname)
         {
             return customerService.FindByLastname(lastname);
         }

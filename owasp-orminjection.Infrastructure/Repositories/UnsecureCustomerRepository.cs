@@ -33,17 +33,29 @@ namespace owasp_orminjection.Infrastructure.Repositories
 
         public Customer FindById(int id)
         {
-            return dBLoanManagerContext.Customers.Where(c => c.CustomerId == id)?.FirstOrDefault();
+            string sql = @$"Select
+                                  *
+                              From Customer
+                             Where CustomerId = {id}";
+            return dBLoanManagerContext.Customers.FromSqlRaw(sql)?.FirstOrDefault();
         }
 
         public IEnumerable<Customer> FindByLastname(string lastname)
         {
-            return dBLoanManagerContext.Customers.FromSqlRaw($"Select * from Customer where Lastnames = '{lastname}'").ToList();
+            string sql = @$"Select
+                                  *
+                              From Customer
+                             Where Lastnames = '{lastname}'";
+            return dBLoanManagerContext.Customers.FromSqlRaw(sql).ToList();
         }
 
         public IEnumerable<Customer> FindByName(string name)
         {
-            return dBLoanManagerContext.Customers.FromSqlRaw($"Select * from Customer where Names = '{name}'").ToList();
+            string sql = @$"Select
+                                  *
+                              From Customer
+                             Where Names = '{name}'";
+            return dBLoanManagerContext.Customers.FromSqlRaw(sql).ToList();
         }
 
         public int Update(Customer t)

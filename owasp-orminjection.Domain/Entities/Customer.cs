@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace owasp_orminjection.Domain.Entities
 {
@@ -17,8 +18,8 @@ namespace owasp_orminjection.Domain.Entities
         public string Phone { get; set; } = null!;
         public string? Address { get; set; }
         public float? Latitude { get; set; }
-        public float? Longitude { get; set; }
-        public DateTime? CreatedOn { get; set; }
+        public float? Longitude { get; set; }        
+        public DateTime? CreatedOn { get; set; }        
         public DateTime? ModifiedOn { get; set; }
 
         public virtual ICollection<Loan> Loans { get; set; }
