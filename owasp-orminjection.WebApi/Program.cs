@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using owasp_orminjection.Application.Interfaces;
+using owasp_orminjection.Application.Services;
 using owasp_orminjection.Domain.Entities;
 using owasp_orminjection.Domain.Interfaces;
 using owasp_orminjection.Infrastructure.Repositories;
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<dbloanmanagerContext>(options => options.UseMySql(
                                                                       .GetConnectionString("Default"),MySqlServerVersion.LatestSupportedServerVersion));
 builder.Services.AddScoped<IDBLoanManagerContext, dbloanmanagerContext>();
 builder.Services.AddScoped<ICustomerRepository, UnsecureCustomerRepository>();
+builder.Services.AddScoped<ICustomerService, UnsecureCustomerService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

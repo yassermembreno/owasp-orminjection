@@ -19,14 +19,25 @@ namespace owasp_orminjection.Application.Services
             return customerRepository.Create(t);
         }
 
-        public bool Delete(Customer t)
+        public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            Customer customer = FindById(id);
+            if(customer == null)
+            {
+                return false;
+            }
+
+            return customerRepository.Delete(customer);
         }
 
         public IEnumerable<Customer> FindAll()
         {
             return customerRepository.FindAll();
+        }
+
+        public Customer FindById(int id)
+        {
+            return customerRepository.FindById(id);
         }
 
         public IEnumerable<Customer> FindByLastname(string lastname)

@@ -5,7 +5,7 @@ namespace owasp_orminjection.Application.Interfaces
     {
         int Create(T t);
         int Update(T t);
-        bool Delete(T t);
+        bool Delete(int id);
         IEnumerable<T> FindAll();
     }
 }

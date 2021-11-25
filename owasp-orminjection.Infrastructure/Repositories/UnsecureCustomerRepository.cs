@@ -22,12 +22,18 @@ namespace owasp_orminjection.Infrastructure.Repositories
 
         public bool Delete(Customer t)
         {
-            throw new NotImplementedException();
+            dBLoanManagerContext.Customers.Remove(t);           
+            return dBLoanManagerContext.SaveChanges() > 0;
         }
 
         public IEnumerable<Customer> FindAll()
         {
             return dBLoanManagerContext.Customers.ToList();
+        }
+
+        public Customer FindById(int id)
+        {
+            return dBLoanManagerContext.Customers.Where(c => c.CustomerId == id)?.FirstOrDefault();
         }
 
         public IEnumerable<Customer> FindByLastname(string lastname)
@@ -42,7 +48,8 @@ namespace owasp_orminjection.Infrastructure.Repositories
 
         public int Update(Customer t)
         {
-            throw new NotImplementedException();
+            dBLoanManagerContext.Customers.Update(t);
+            return dBLoanManagerContext.SaveChanges();
         }
     }
 }

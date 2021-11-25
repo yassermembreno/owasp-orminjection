@@ -7,8 +7,6 @@ using owasp_orminjection.Application.Interfaces;
 using owasp_orminjection.Domain.Entities;
 using owasp_orminjection.Domain.Interfaces;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace owasp_orminjection.WebApi.Controllers
 {
     [ApiController]
@@ -40,6 +38,13 @@ namespace owasp_orminjection.WebApi.Controllers
         {
             int result = customerService.Create(customer);
             return result > 0 ? Ok(result) : BadRequest();
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public ActionResult DeleteCustomer(int id)
+        {
+            return customerService.Delete(id) ? Ok() : NotFound(); 
         }
     }
 }
